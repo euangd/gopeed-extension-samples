@@ -11,6 +11,8 @@ gopeed.events.onResolve(async function (ctx) {
   const resp = await fetch(`https://api.github.com/repos/${path}`, {
     headers: {
       "User-Agent": gopeed.settings.ua,
+      "Authorization": Bearer your_api_token,
+      
     },
   });
   const data = await resp.json();
